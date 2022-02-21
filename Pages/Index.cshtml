@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Travel Explore";
+    var Username = "Tourist";
+    <p>Username the first time: @Username</p>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hello there!</h1>
+
+
+<p>The currunt time is @DateTime.Now</p>
+<p>masterajima822@gmail.com</p>
+ <p>@DateTime.IsLeapYear(2020)</p>
+    <p>This time last week: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+    <p>@Username </p>
+   
+    <p>@DateTime.IsLeapYear(2020)</p>
+</div>

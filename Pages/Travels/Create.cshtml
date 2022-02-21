@@ -1,0 +1,54 @@
+﻿@page
+@model AjimaExploreTravel.Pages.Travels.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Travel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Travel.TravelTitle" class="control-label"></label>
+                <input asp-for="Travel.TravelTitle" class="form-control" />
+                <span asp-validation-for="Travel.TravelTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Travel.BookDate" class="control-label"></label>
+                <input asp-for="Travel.BookDate" class="form-control" />
+                <span asp-validation-for="Travel.BookDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Travel.TouristAddress" class="control-label"></label>
+                <input asp-for="Travel.TouristAddress" class="form-control" />
+                <span asp-validation-for="Travel.TouristAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Travel.HotelPrice" class="control-label"></label>
+                <input asp-for="Travel.HotelPrice" class="form-control" />
+                <span asp-validation-for="Travel.HotelPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Travel.HotelAddress" class="control-label"></label>
+                <input asp-for="Travel.HotelAddress" class="form-control" />
+                <span asp-validation-for="Travel.HotelAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
